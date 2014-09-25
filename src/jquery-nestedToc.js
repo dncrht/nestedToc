@@ -1,7 +1,7 @@
 (function($) {
 
   /*
-   jQuery nestedToc Plugin 0.1
+   jQuery nestedToc Plugin 0.2
    https://github.com/dncrht/nestedToc
 
    Copyright (c) 2014 Daniel Cruz Horts
@@ -62,13 +62,13 @@
       }
 
       var type = 'h' + level;
-      if ($(type).length != 0) { // are there elements in this level?
-        $(type).each(function(_, heading) {
+      if ($(this.settings.container).find(type).length != 0) { // are there elements in this level?
+        $(this.settings.container).find(type).each(function(_, heading) {
 
           var siblings = '';
 
           // find all my siblings
-          $(heading).siblings(type).each(function(_, sibling) {
+          $(this.settings.container).find(heading).siblings(type).each(function(_, sibling) {
             this._headingsFound.push(this._id(sibling));
             siblings += this._asHtml(sibling);
           }.bind(this));
