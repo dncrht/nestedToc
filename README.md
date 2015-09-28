@@ -1,6 +1,6 @@
 # nestedToc
 
-nestedToc is a light jQuery plugin that will automatically generate a table of contents for your page.
+nestedToc is a light jQuery plugin that will automatically generate a hierarchical table of contents for your page, based on the heading tags found.
 
 ## Try it!
 
@@ -16,8 +16,6 @@ and put the table in `div#my-toc`…
 You can pass several options:
 
 - container: element to scan the table of contents from. By default: `body`
-- ignoreH: scan from this heading level. By default: 1. This will scan h2, h3, h4…
-If you want to include h1, pass a 0.
 
 Simplest usage:
 
